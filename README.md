@@ -2,4 +2,4 @@
 10/100/1000M Ethernet tester
 
 ### Simulation with customized GUI console:
-![Alt text](./doc/pic/sim_gui.jpg)
+![Alt text](./doc/pic/sim_gui.png)
