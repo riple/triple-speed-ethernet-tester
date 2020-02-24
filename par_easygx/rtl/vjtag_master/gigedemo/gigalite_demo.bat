@@ -1,0 +1,1 @@
+quartus_stp -t gigalite_demo.tcl

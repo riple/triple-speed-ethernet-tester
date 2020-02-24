@@ -1,0 +1,153 @@
+#---------------------------------------------------------------------------------------
+# Define Device, Package And Speed Grade
+#---------------------------------------------------------------------------------------
+  CONFIG PART = xc6slx45t-fgg484-3;
+  
+#---------------------------------------------------------------------------------------
+# I/O constraints
+#---------------------------------------------------------------------------------------
+
+  #System control connections
+  NET "sys_rst_n"      LOC = AB14 | IOSTANDARD = LVCMOS25;
+  NET "clk_125M_in_p"  LOC = AA12 | IOSTANDARD = LVDS_25;
+  NET "clk_125M_in_n"  LOC = AB12 | IOSTANDARD = LVDS_25;
+
+# Port 0
+  #PHY0 RGMII connections
+  NET "p0_tse_mac_rgmii_in<3>"  LOC = H22 | IOSTANDARD = LVCMOS25;
+  NET "p0_tse_mac_rgmii_in<2>"  LOC = H21 | IOSTANDARD = LVCMOS25;
+  NET "p0_tse_mac_rgmii_in<1>"  LOC = J22 | IOSTANDARD = LVCMOS25;
+  NET "p0_tse_mac_rgmii_in<0>"  LOC = H20 | IOSTANDARD = LVCMOS25;
+  NET "p0_tse_mac_rx_control"   LOC = K20 | IOSTANDARD = LVCMOS25;
+  NET "p0_tse_mac_rx_clk"       LOC = K22 | IOSTANDARD = LVCMOS25;
+  
+  NET "p0_tse_mac_rgmii_out<3>"  LOC = D22 | IOSTANDARD = LVCMOS25;
+  NET "p0_tse_mac_rgmii_out<2>"  LOC = E22 | IOSTANDARD = LVCMOS25;
+  NET "p0_tse_mac_rgmii_out<1>"  LOC = F22 | IOSTANDARD = LVCMOS25;
+  NET "p0_tse_mac_rgmii_out<0>"  LOC = G22 | IOSTANDARD = LVCMOS25;
+  NET "p0_tse_mac_tx_control"    LOC = B22 | IOSTANDARD = LVCMOS25;
+  NET "p0_tse_mac_tx_clk"        LOC = K21 | IOSTANDARD = LVCMOS25;
+    
+  #PHY0 Reset connection 
+  NET "p0_tse_mac_resetn" LOC = M22 | IOSTANDARD = LVCMOS25;
+  NET "p0_tse_mac_resetn" TIG;
+
+  #PHY0 MDIO connections
+  NET "p0_tse_mac_mdc"   LOC = P21 | IOSTANDARD = LVCMOS25;
+  NET "p0_tse_mac_mdio"  LOC = N22 | IOSTANDARD = LVCMOS25;
+
+  #Port0 SPI connections
+  NET "p0_spi_cs"    LOC = AA3 | IOSTANDARD = LVCMOS25;
+  NET "p0_spi_clk"   LOC = AA4 | IOSTANDARD = LVCMOS25;
+  NET "p0_spi_mosi"  LOC = T7  | IOSTANDARD = LVCMOS25;
+  NET "p0_spi_miso"  LOC = U6  | IOSTANDARD = LVCMOS25;
+
+  #Port0 Debug signals
+  NET "p0_phy_led_rx"  LOC = U20 | IOSTANDARD = LVCMOS25;
+  NET "p0_phy_led_tx"  LOC = T22 | IOSTANDARD = LVCMOS25;
+
+# Port 1
+  #PHY1 RGMII connections
+  NET "p1_tse_mac_rgmii_in<3>"  LOC = U8   | IOSTANDARD = LVCMOS25;
+  NET "p1_tse_mac_rgmii_in<2>"  LOC = AA6  | IOSTANDARD = LVCMOS25;
+  NET "p1_tse_mac_rgmii_in<1>"  LOC = AB6  | IOSTANDARD = LVCMOS25;
+  NET "p1_tse_mac_rgmii_in<0>"  LOC = Y6   | IOSTANDARD = LVCMOS25;
+  NET "p1_tse_mac_rx_control"   LOC = W6   | IOSTANDARD = LVCMOS25;
+  NET "p1_tse_mac_rx_clk"       LOC = AB11 | IOSTANDARD = LVCMOS25;
+  
+  NET "p1_tse_mac_rgmii_out<3>"  LOC = Y12 | IOSTANDARD = LVCMOS25;
+  NET "p1_tse_mac_rgmii_out<2>"  LOC = U9  | IOSTANDARD = LVCMOS25;
+  NET "p1_tse_mac_rgmii_out<1>"  LOC = V9  | IOSTANDARD = LVCMOS25;
+  NET "p1_tse_mac_rgmii_out<0>"  LOC = T8  | IOSTANDARD = LVCMOS25;
+  NET "p1_tse_mac_tx_control"    LOC = W12 | IOSTANDARD = LVCMOS25;
+  NET "p1_tse_mac_tx_clk"        LOC = Y11 | IOSTANDARD = LVCMOS25;
+    
+  #PHY1 Reset connection 
+  NET "p1_tse_mac_resetn" LOC = AB10 | IOSTANDARD = LVCMOS25;
+  NET "p1_tse_mac_resetn" TIG;
+
+  #PHY1 MDIO connections
+  NET "p1_tse_mac_mdc"   LOC = Y7  | IOSTANDARD = LVCMOS25;
+  NET "p1_tse_mac_mdio"  LOC = AB7 | IOSTANDARD = LVCMOS25;
+
+  #Port1 SPI connections
+  NET "p1_spi_cs"    LOC = F9  | IOSTANDARD = LVCMOS25;
+  NET "p1_spi_clk"   LOC = G9  | IOSTANDARD = LVCMOS25;
+  NET "p1_spi_mosi"  LOC = H10 | IOSTANDARD = LVCMOS25;
+  NET "p1_spi_miso"  LOC = H11 | IOSTANDARD = LVCMOS25;
+
+  #Port1 Debug signals
+  NET "p1_phy_led_rx"  LOC = U10 | IOSTANDARD = LVCMOS25;
+  NET "p1_phy_led_tx"  LOC = T10 | IOSTANDARD = LVCMOS25;
+  
+#---------------------------------------------------------------------------------------
+# Timing constraints
+#---------------------------------------------------------------------------------------
+
+NET "clk_125M" TNM_NET = "clk_125M";
+TIMESPEC TS_clk_125M = PERIOD "clk_125M" 8 ns HIGH 50%;
+
+# Port 0
+
+# basic clocks
+NET "p0_tse_mac_rx_clk" TNM_NET = "p0_tse_mac_rx_clk";
+TIMESPEC TS_p0_tse_mac_rx_clk = PERIOD "p0_tse_mac_rx_clk" 8 ns HIGH 50%;
+
+# generated clocks
+#NET "dut_p0/up_clk" TNM_NET = "dut_p0/up_clk";
+#TIMESPEC TS_p0_up_clk = PERIOD "dut_p0/up_clk" 20 ns HIGH 50%;
+#NET "dut_p0/sys_clk" TNM_NET = "dut_p0/sys_clk";
+#TIMESPEC TS_p0_sys_clk = PERIOD "dut_p0/sys_clk" 10 ns HIGH 50%;
+#NET "dut_p0/mdio_clk" TNM_NET = "dut_p0/mdio_clk";
+#TIMESPEC TS_p0_mdio_clk = PERIOD "dut_p0/mdio_clk" 100 ns HIGH 50%;
+#NET "dut_p0/tx_con_clk" TNM_NET = "dut_p0/tx_con_clk";
+#TIMESPEC TS_p0_tx_con_clk = PERIOD "dut_p0/tx_con_clk" 20 ns HIGH 50%;
+
+# cut off inter-clock paths
+NET "up_clk_p0" TNM_NET = "up_clk_p0";
+TIMESPEC TS_p0_interclock_0 = FROM "up_clk_p0" TO "p0_tse_mac_rx_clk" TIG;
+NET "dut_p0/tx_con_clk" TNM_NET = "dut_p0/tx_con_clk";
+TIMESPEC TS_p0_interclock_1 = FROM "dut_p0/tx_con_clk" TO "p0_tse_mac_rx_clk" TIG;
+NET "dut_p0/sys_clk" TNM_NET = "dut_p0/sys_clk";
+TIMESPEC TS_p0_interclock_2 = FROM "dut_p0/sys_clk" TO "p0_tse_mac_rx_clk" TIG;
+
+# 4 cycle multi-cycle
+NET "*p0/*/tx_gearbox_inst/gen_en" TNM_NET = FFS "MC_GRP_p0_tx_enable";
+TIMESPEC TS_p0_tx_enable = FROM "MC_GRP_p0_tx_enable" TO "MC_GRP_p0_tx_enable" TS_p0_tse_mac_rx_clk*4;
+NET "*p0/*/tx_gen_inst/*" TNM_NET = FFS "MC_GRP_p0_tx_gen";
+TIMESPEC TS_p0_tx_gen = FROM "MC_GRP_p0_tx_gen" TO "MC_GRP_p0_tx_gen" TS_p0_tse_mac_rx_clk*4;
+NET "*p0/*/rx_gearbox_inst/par_en" TNM_NET = FFS "MC_GRP_p0_rx_enable";
+TIMESPEC TS_p0_rx_enable = FROM "MC_GRP_p0_rx_enable" TO "MC_GRP_p0_rx_enable" TS_p0_tse_mac_rx_clk*4;
+NET "*p0/*/rx_parser_inst/*" TNM_NET = FFS "MC_GRP_p0_rx_parser";
+TIMESPEC TS_p0_rx_parser = FROM "MC_GRP_p0_rx_parser" TO "MC_GRP_p0_rx_parser" TS_p0_tse_mac_rx_clk*4;
+NET "*p0/*/rx_loop_inst/*" TNM_NET = FFS "MC_GRP_p0_rx_loop";
+TIMESPEC TS_p0_rx_loop = FROM "MC_GRP_p0_rx_loop" TO "MC_GRP_p0_rx_loop" TS_p0_tse_mac_rx_clk*4;
+
+
+# Port 1
+
+# basic clocks
+NET "p1_tse_mac_rx_clk" TNM_NET = "p1_tse_mac_rx_clk";
+TIMESPEC TS_p1_tse_mac_rx_clk = PERIOD "p1_tse_mac_rx_clk" 8 ns HIGH 50%;
+
+# cut off inter-clock paths
+NET "up_clk_p1" TNM_NET = "up_clk_p1";
+TIMESPEC TS_p1_interclock_0 = FROM "up_clk_p1" TO "p1_tse_mac_rx_clk" TIG;
+NET "dut_p1/tx_con_clk" TNM_NET = "dut_p1/tx_con_clk";
+TIMESPEC TS_p1_interclock_1 = FROM "dut_p1/tx_con_clk" TO "p1_tse_mac_rx_clk" TIG;
+NET "dut_p1/sys_clk" TNM_NET = "dut_p1/sys_clk";
+TIMESPEC TS_p1_interclock_2 = FROM "dut_p1/sys_clk" TO "p1_tse_mac_rx_clk" TIG;
+
+# 4 cycle multi-cycle
+NET "*p1/*/tx_gearbox_inst/gen_en" TNM_NET = FFS "MC_GRP_p1_tx_enable";
+TIMESPEC TS_p1_tx_enable = FROM "MC_GRP_p1_tx_enable" TO "MC_GRP_p1_tx_enable" TS_p1_tse_mac_rx_clk*4;
+NET "*p1/*/tx_gen_inst/*" TNM_NET = FFS "MC_GRP_p1_tx_gen";
+TIMESPEC TS_p1_tx_gen = FROM "MC_GRP_p1_tx_gen" TO "MC_GRP_p1_tx_gen" TS_p1_tse_mac_rx_clk*4;
+NET "*p1/*/rx_gearbox_inst/par_en" TNM_NET = FFS "MC_GRP_p1_rx_enable";
+TIMESPEC TS_p1_rx_enable = FROM "MC_GRP_p1_rx_enable" TO "MC_GRP_p1_rx_enable" TS_p1_tse_mac_rx_clk*4;
+NET "*p1/*/rx_parser_inst/*" TNM_NET = FFS "MC_GRP_p1_rx_parser";
+TIMESPEC TS_p1_rx_parser = FROM "MC_GRP_p1_rx_parser" TO "MC_GRP_p1_rx_parser" TS_p1_tse_mac_rx_clk*4;
+NET "*p1/*/rx_loop_inst/*" TNM_NET = FFS "MC_GRP_p1_rx_loop";
+TIMESPEC TS_p1_rx_loop = FROM "MC_GRP_p1_rx_loop" TO "MC_GRP_p1_rx_loop" TS_p1_tse_mac_rx_clk*4;
+
+

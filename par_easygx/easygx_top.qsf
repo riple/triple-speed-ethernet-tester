@@ -1,0 +1,383 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 1991-2011 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions
+# and other software and tools, and its AMPP partner logic
+# functions, and any output files from any of the foregoing
+# (including device programming or simulation files), and any
+# associated documentation or information are expressly subject
+# to the terms and conditions of the Altera Program License
+# Subscription Agreement, Altera MegaCore Function License
+# Agreement, or other applicable license agreement, including,
+# without limitation, that your use is for the sole purpose of
+# programming logic devices manufactured by Altera and sold by
+# Altera or its authorized distributors.  Please refer to the
+# applicable agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus II 32-bit
+# Version 11.1 Build 259 01/25/2012 Service Pack 2 SJ Full Version
+# Date created = 18:07:16  May 07, 2012
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		easygx_top_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus II software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "Cyclone IV GX"
+set_global_assignment -name DEVICE EP4CGX22CF19C8
+set_global_assignment -name TOP_LEVEL_ENTITY easygx_top
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION "12.0 SP2"
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "10:50:48  SEPTEMBER 01, 2012"
+set_global_assignment -name LAST_QUARTUS_VERSION 13.1
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_location_assignment PIN_B4 -to epcs_flash_controller_sdo
+set_location_assignment PIN_A4 -to epcs_flash_controller_data0
+set_location_assignment PIN_D5 -to epcs_flash_controller_dclk
+set_location_assignment PIN_C5 -to epcs_flash_controller_sce
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to epcs_flash_controller_sdo
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to epcs_flash_controller_data0
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to epcs_flash_controller_dclk
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to epcs_flash_controller_sce
+set_location_assignment PIN_C16 -to ddr2_memory_mem_clk_n
+set_location_assignment PIN_C17 -to ddr2_memory_mem_clk
+set_location_assignment PIN_C8 -to ddr2_memory_mem_dqs[1]
+set_location_assignment PIN_C14 -to ddr2_memory_mem_dqs[0]
+set_location_assignment PIN_A6 -to ddr2_memory_mem_dq[15]
+set_location_assignment PIN_B7 -to ddr2_memory_mem_dq[14]
+set_location_assignment PIN_A11 -to ddr2_memory_mem_dq[13]
+set_location_assignment PIN_C10 -to ddr2_memory_mem_dq[12]
+set_location_assignment PIN_B10 -to ddr2_memory_mem_dq[11]
+set_location_assignment PIN_A10 -to ddr2_memory_mem_dq[10]
+set_location_assignment PIN_A8 -to ddr2_memory_mem_dq[9]
+set_location_assignment PIN_A7 -to ddr2_memory_mem_dq[8]
+set_location_assignment PIN_B15 -to ddr2_memory_mem_dq[7]
+set_location_assignment PIN_D10 -to ddr2_memory_mem_dq[6]
+set_location_assignment PIN_A17 -to ddr2_memory_mem_dq[5]
+set_location_assignment PIN_D11 -to ddr2_memory_mem_dq[4]
+set_location_assignment PIN_A13 -to ddr2_memory_mem_dq[3]
+set_location_assignment PIN_D15 -to ddr2_memory_mem_dq[2]
+set_location_assignment PIN_C12 -to ddr2_memory_mem_dq[1]
+set_location_assignment PIN_C15 -to ddr2_memory_mem_dq[0]
+set_location_assignment PIN_B6 -to ddr2_memory_mem_dm[1]
+set_location_assignment PIN_E10 -to ddr2_memory_mem_dm[0]
+set_location_assignment PIN_D9 -to ddr2_memory_mem_ba[2]
+set_location_assignment PIN_A9 -to ddr2_memory_mem_ba[1]
+set_location_assignment PIN_B9 -to ddr2_memory_mem_ba[0]
+set_location_assignment PIN_C13 -to ddr2_memory_mem_addr[12]
+set_location_assignment PIN_A16 -to ddr2_memory_mem_addr[11]
+set_location_assignment PIN_C11 -to ddr2_memory_mem_addr[10]
+set_location_assignment PIN_D14 -to ddr2_memory_mem_addr[9]
+set_location_assignment PIN_D16 -to ddr2_memory_mem_addr[8]
+set_location_assignment PIN_A15 -to ddr2_memory_mem_addr[7]
+set_location_assignment PIN_B16 -to ddr2_memory_mem_addr[6]
+set_location_assignment PIN_B13 -to ddr2_memory_mem_addr[5]
+set_location_assignment PIN_A18 -to ddr2_memory_mem_addr[4]
+set_location_assignment PIN_D13 -to ddr2_memory_mem_addr[3]
+set_location_assignment PIN_A14 -to ddr2_memory_mem_addr[2]
+set_location_assignment PIN_D12 -to ddr2_memory_mem_addr[1]
+set_location_assignment PIN_C9 -to ddr2_memory_mem_addr[0]
+set_location_assignment PIN_A5 -to ddr2_memory_mem_cs_n
+set_location_assignment PIN_B5 -to ddr2_memory_mem_odt
+set_location_assignment PIN_C6 -to ddr2_memory_mem_cas_n
+set_location_assignment PIN_C7 -to ddr2_memory_mem_we_n
+set_location_assignment PIN_D6 -to ddr2_memory_mem_ras_n
+set_location_assignment PIN_D7 -to ddr2_memory_mem_cke
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to ddr2_memory_mem_ba[2]
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to ddr2_memory_mem_odt
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to ddr2_memory_mem_clk
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to ddr2_memory_mem_clk_n
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to ddr2_memory_mem_cs_n
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to ddr2_memory_mem_cke
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to ddr2_memory_mem_addr[0]
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to ddr2_memory_mem_addr[1]
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to ddr2_memory_mem_addr[2]
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to ddr2_memory_mem_addr[3]
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to ddr2_memory_mem_addr[4]
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to ddr2_memory_mem_addr[5]
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to ddr2_memory_mem_addr[6]
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to ddr2_memory_mem_addr[7]
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to ddr2_memory_mem_addr[8]
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to ddr2_memory_mem_addr[9]
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to ddr2_memory_mem_addr[10]
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to ddr2_memory_mem_addr[11]
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to ddr2_memory_mem_addr[12]
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to ddr2_memory_mem_ba[0]
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to ddr2_memory_mem_ba[1]
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to ddr2_memory_mem_ras_n
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to ddr2_memory_mem_cas_n
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to ddr2_memory_mem_we_n
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to ddr2_memory_mem_dq[0]
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to ddr2_memory_mem_dq[1]
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to ddr2_memory_mem_dq[2]
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to ddr2_memory_mem_dq[3]
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to ddr2_memory_mem_dq[4]
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to ddr2_memory_mem_dq[5]
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to ddr2_memory_mem_dq[6]
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to ddr2_memory_mem_dq[7]
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to ddr2_memory_mem_dq[8]
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to ddr2_memory_mem_dq[9]
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to ddr2_memory_mem_dq[10]
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to ddr2_memory_mem_dq[11]
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to ddr2_memory_mem_dq[12]
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to ddr2_memory_mem_dq[13]
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to ddr2_memory_mem_dq[14]
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to ddr2_memory_mem_dq[15]
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to ddr2_memory_mem_dqs[0]
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to ddr2_memory_mem_dqs[1]
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to ddr2_memory_mem_dm[0]
+set_instance_assignment -name IO_STANDARD "SSTL-18 CLASS I" -to ddr2_memory_mem_dm[1]
+set_location_assignment PIN_V16 -to tse_mac_rgmii_in[3]
+set_location_assignment PIN_U15 -to tse_mac_rgmii_in[2]
+set_location_assignment PIN_V15 -to tse_mac_rgmii_in[1]
+set_location_assignment PIN_V14 -to tse_mac_rgmii_in[0]
+set_location_assignment PIN_V17 -to tse_mac_rgmii_out[3]
+set_location_assignment PIN_U18 -to tse_mac_rgmii_out[2]
+set_location_assignment PIN_T16 -to tse_mac_rgmii_out[1]
+set_location_assignment PIN_T17 -to tse_mac_rgmii_out[0]
+set_location_assignment PIN_T14 -to tse_mac_rx_control
+set_location_assignment PIN_U16 -to tse_mac_tx_control
+set_location_assignment PIN_V13 -to tse_mac_mdc
+set_location_assignment PIN_U12 -to tse_mac_mdio
+set_location_assignment PIN_K17 -to tse_mac_rx_clk
+set_location_assignment PIN_U13 -to tse_mac_resetn
+set_location_assignment PIN_P15 -to tse_mac_tx_clk
+set_instance_assignment -name IO_STANDARD "2.5 V" -to tse_mac_rgmii_in[3]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to tse_mac_rgmii_in[2]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to tse_mac_rgmii_in[1]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to tse_mac_rgmii_in[0]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to tse_mac_rgmii_out[3]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to tse_mac_rgmii_out[2]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to tse_mac_rgmii_out[1]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to tse_mac_rgmii_out[0]
+set_instance_assignment -name IO_STANDARD "2.5 V" -to tse_mac_rx_control
+set_instance_assignment -name IO_STANDARD "2.5 V" -to tse_mac_tx_control
+set_instance_assignment -name IO_STANDARD "2.5 V" -to tse_mac_mdc
+set_instance_assignment -name IO_STANDARD "2.5 V" -to tse_mac_rx_clk
+set_instance_assignment -name IO_STANDARD "2.5 V" -to tse_mac_resetn
+set_instance_assignment -name IO_STANDARD "2.5 V" -to tse_mac_tx_clk
+set_instance_assignment -name IO_STANDARD "2.5 V" -to tse_mac_mdio
+set_location_assignment PIN_R10 -to led[3]
+set_location_assignment PIN_U10 -to led[2]
+set_location_assignment PIN_V10 -to led[1]
+set_location_assignment PIN_T10 -to led[0]
+set_location_assignment PIN_T6 -to button_pio
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to button_pio
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to led[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to led[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to led[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to led[0]
+set_location_assignment PIN_N5 -to sd_card_clk
+set_location_assignment PIN_T9 -to sd_card_cs_n
+set_location_assignment PIN_V9 -to sd_card_data_in
+set_location_assignment PIN_U9 -to sd_card_data_out
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to sd_card_clk
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to sd_card_cs_n
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to sd_card_data_in
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to sd_card_data_out
+set_location_assignment PIN_V12 -to clk_50M
+set_instance_assignment -name IO_STANDARD "2.5 V" -to clk_50M
+set_location_assignment PIN_G10 -to clk_125M
+set_location_assignment PIN_G9 -to "clk_125M(n)"
+set_instance_assignment -name IO_STANDARD LVDS -to clk_125M
+set_location_assignment PIN_J18 -to ext_reset_n
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ext_reset_n
+set_location_assignment PIN_M9 -to clk_100M
+set_location_assignment PIN_M10 -to "clk_100M(n)"
+set_instance_assignment -name IO_STANDARD LVDS -to clk_100M
+set_location_assignment PIN_P6 -to alive_led
+set_location_assignment PIN_V5 -to L0_led
+set_location_assignment PIN_V11 -to pcie_rst_n
+set_location_assignment PIN_T2 -to pcie_rx
+set_location_assignment PIN_T1 -to "pcie_rx(n)"
+set_location_assignment PIN_P2 -to pcie_tx
+set_location_assignment PIN_P1 -to "pcie_tx(n)"
+set_instance_assignment -name IO_STANDARD "1.5-V PCML" -to pcie_rx
+set_instance_assignment -name IO_STANDARD "1.5-V PCML" -to pcie_tx
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to alive_led
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to L0_led
+set_instance_assignment -name IO_STANDARD "2.5 V" -to pcie_rst_n
+set_global_assignment -name ENABLE_SIGNALTAP OFF
+
+set_global_assignment -name EDA_SIMULATION_TOOL "<None>"
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr2_memory_mem_ba[2]
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr2_memory_mem_odt
+set_instance_assignment -name CURRENT_STRENGTH_NEW 12MA -to ddr2_memory_mem_clk
+set_instance_assignment -name PAD_TO_CORE_DELAY 0 -to ddr2_memory_mem_clk
+set_instance_assignment -name CURRENT_STRENGTH_NEW 12MA -to ddr2_memory_mem_clk_n
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr2_memory_mem_cs_n
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr2_memory_mem_cke
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr2_memory_mem_addr[0]
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr2_memory_mem_addr[1]
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr2_memory_mem_addr[2]
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr2_memory_mem_addr[3]
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr2_memory_mem_addr[4]
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr2_memory_mem_addr[5]
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr2_memory_mem_addr[6]
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr2_memory_mem_addr[7]
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr2_memory_mem_addr[8]
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr2_memory_mem_addr[9]
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr2_memory_mem_addr[10]
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr2_memory_mem_addr[11]
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr2_memory_mem_addr[12]
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr2_memory_mem_ba[0]
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr2_memory_mem_ba[1]
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr2_memory_mem_ras_n
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr2_memory_mem_cas_n
+set_instance_assignment -name CURRENT_STRENGTH_NEW "MAXIMUM CURRENT" -to ddr2_memory_mem_we_n
+set_instance_assignment -name CURRENT_STRENGTH_NEW 12MA -to ddr2_memory_mem_dq[0]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 12MA -to ddr2_memory_mem_dq[1]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 12MA -to ddr2_memory_mem_dq[2]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 12MA -to ddr2_memory_mem_dq[3]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 12MA -to ddr2_memory_mem_dq[4]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 12MA -to ddr2_memory_mem_dq[5]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 12MA -to ddr2_memory_mem_dq[6]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 12MA -to ddr2_memory_mem_dq[7]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 12MA -to ddr2_memory_mem_dq[8]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 12MA -to ddr2_memory_mem_dq[9]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 12MA -to ddr2_memory_mem_dq[10]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 12MA -to ddr2_memory_mem_dq[11]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 12MA -to ddr2_memory_mem_dq[12]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 12MA -to ddr2_memory_mem_dq[13]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 12MA -to ddr2_memory_mem_dq[14]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 12MA -to ddr2_memory_mem_dq[15]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 12MA -to ddr2_memory_mem_dqs[0]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 12MA -to ddr2_memory_mem_dqs[1]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 12MA -to ddr2_memory_mem_dm[0]
+set_instance_assignment -name CURRENT_STRENGTH_NEW 12MA -to ddr2_memory_mem_dm[1]
+set_instance_assignment -name MEM_INTERFACE_DELAY_CHAIN_CONFIG FLEXIBLE_TIMING -to ddr2_memory_mem_dq[0]
+set_instance_assignment -name MEM_INTERFACE_DELAY_CHAIN_CONFIG FLEXIBLE_TIMING -to ddr2_memory_mem_dq[1]
+set_instance_assignment -name MEM_INTERFACE_DELAY_CHAIN_CONFIG FLEXIBLE_TIMING -to ddr2_memory_mem_dq[2]
+set_instance_assignment -name MEM_INTERFACE_DELAY_CHAIN_CONFIG FLEXIBLE_TIMING -to ddr2_memory_mem_dq[3]
+set_instance_assignment -name MEM_INTERFACE_DELAY_CHAIN_CONFIG FLEXIBLE_TIMING -to ddr2_memory_mem_dq[4]
+set_instance_assignment -name MEM_INTERFACE_DELAY_CHAIN_CONFIG FLEXIBLE_TIMING -to ddr2_memory_mem_dq[5]
+set_instance_assignment -name MEM_INTERFACE_DELAY_CHAIN_CONFIG FLEXIBLE_TIMING -to ddr2_memory_mem_dq[6]
+set_instance_assignment -name MEM_INTERFACE_DELAY_CHAIN_CONFIG FLEXIBLE_TIMING -to ddr2_memory_mem_dq[7]
+set_instance_assignment -name MEM_INTERFACE_DELAY_CHAIN_CONFIG FLEXIBLE_TIMING -to ddr2_memory_mem_dq[8]
+set_instance_assignment -name MEM_INTERFACE_DELAY_CHAIN_CONFIG FLEXIBLE_TIMING -to ddr2_memory_mem_dq[9]
+set_instance_assignment -name MEM_INTERFACE_DELAY_CHAIN_CONFIG FLEXIBLE_TIMING -to ddr2_memory_mem_dq[10]
+set_instance_assignment -name MEM_INTERFACE_DELAY_CHAIN_CONFIG FLEXIBLE_TIMING -to ddr2_memory_mem_dq[11]
+set_instance_assignment -name MEM_INTERFACE_DELAY_CHAIN_CONFIG FLEXIBLE_TIMING -to ddr2_memory_mem_dq[12]
+set_instance_assignment -name MEM_INTERFACE_DELAY_CHAIN_CONFIG FLEXIBLE_TIMING -to ddr2_memory_mem_dq[13]
+set_instance_assignment -name MEM_INTERFACE_DELAY_CHAIN_CONFIG FLEXIBLE_TIMING -to ddr2_memory_mem_dq[14]
+set_instance_assignment -name MEM_INTERFACE_DELAY_CHAIN_CONFIG FLEXIBLE_TIMING -to ddr2_memory_mem_dq[15]
+set_instance_assignment -name MEM_INTERFACE_DELAY_CHAIN_CONFIG FLEXIBLE_TIMING -to ddr2_memory_mem_dqs[0]
+set_instance_assignment -name MEM_INTERFACE_DELAY_CHAIN_CONFIG FLEXIBLE_TIMING -to ddr2_memory_mem_dqs[1]
+set_instance_assignment -name MEM_INTERFACE_DELAY_CHAIN_CONFIG FLEXIBLE_TIMING -to ddr2_memory_mem_dm[0]
+set_instance_assignment -name MEM_INTERFACE_DELAY_CHAIN_CONFIG FLEXIBLE_TIMING -to ddr2_memory_mem_dm[1]
+set_instance_assignment -name OUTPUT_ENABLE_GROUP 703632546 -to ddr2_memory_mem_dq[0]
+set_instance_assignment -name OUTPUT_ENABLE_GROUP 703632546 -to ddr2_memory_mem_dq[1]
+set_instance_assignment -name OUTPUT_ENABLE_GROUP 703632546 -to ddr2_memory_mem_dq[2]
+set_instance_assignment -name OUTPUT_ENABLE_GROUP 703632546 -to ddr2_memory_mem_dq[3]
+set_instance_assignment -name OUTPUT_ENABLE_GROUP 703632546 -to ddr2_memory_mem_dq[4]
+set_instance_assignment -name OUTPUT_ENABLE_GROUP 703632546 -to ddr2_memory_mem_dq[5]
+set_instance_assignment -name OUTPUT_ENABLE_GROUP 703632546 -to ddr2_memory_mem_dq[6]
+set_instance_assignment -name OUTPUT_ENABLE_GROUP 703632546 -to ddr2_memory_mem_dq[7]
+set_instance_assignment -name OUTPUT_ENABLE_GROUP 703632546 -to ddr2_memory_mem_dq[8]
+set_instance_assignment -name OUTPUT_ENABLE_GROUP 703632546 -to ddr2_memory_mem_dq[9]
+set_instance_assignment -name OUTPUT_ENABLE_GROUP 703632546 -to ddr2_memory_mem_dq[10]
+set_instance_assignment -name OUTPUT_ENABLE_GROUP 703632546 -to ddr2_memory_mem_dq[11]
+set_instance_assignment -name OUTPUT_ENABLE_GROUP 703632546 -to ddr2_memory_mem_dq[12]
+set_instance_assignment -name OUTPUT_ENABLE_GROUP 703632546 -to ddr2_memory_mem_dq[13]
+set_instance_assignment -name OUTPUT_ENABLE_GROUP 703632546 -to ddr2_memory_mem_dq[14]
+set_instance_assignment -name OUTPUT_ENABLE_GROUP 703632546 -to ddr2_memory_mem_dq[15]
+set_instance_assignment -name OUTPUT_ENABLE_GROUP 703632546 -to ddr2_memory_mem_dqs[0]
+set_instance_assignment -name OUTPUT_ENABLE_GROUP 703632546 -to ddr2_memory_mem_dqs[1]
+set_instance_assignment -name OUTPUT_ENABLE_GROUP 703632546 -to ddr2_memory_mem_dm[0]
+set_instance_assignment -name OUTPUT_ENABLE_GROUP 703632546 -to ddr2_memory_mem_dm[1]
+set_instance_assignment -name CKN_CK_PAIR ON -from ddr2_memory_mem_clk_n -to ddr2_memory_mem_clk
+set_global_assignment -name USE_CONFIGURATION_DEVICE OFF
+set_global_assignment -name RESERVE_DATA0_AFTER_CONFIGURATION "USE AS REGULAR IO"
+set_global_assignment -name RESERVE_DATA1_AFTER_CONFIGURATION "USE AS REGULAR IO"
+set_global_assignment -name RESERVE_FLASH_NCE_AFTER_CONFIGURATION "USE AS REGULAR IO"
+set_global_assignment -name RESERVE_DCLK_AFTER_CONFIGURATION "USE AS REGULAR IO"
+set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -rise
+set_global_assignment -name OUTPUT_IO_TIMING_NEAR_END_VMEAS "HALF VCCIO" -fall
+set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -rise
+set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -fall
+set_global_assignment -name ACTIVE_SERIAL_CLOCK FREQ_40MHZ
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "2.5 V"
+
+set_global_assignment -name TIMEQUEST_MULTICORNER_ANALYSIS ON
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+
+
+
+
+
+
+
+
+
+
+set_global_assignment -name SDC_FILE easygx_top.sdc
+set_global_assignment -name VERILOG_FILE rtl/easygx_top.v
+set_global_assignment -name VERILOG_FILE rtl/cpu_bfm.v
+set_global_assignment -name VERILOG_FILE rtl/vjtag_master/avalon_vjtag_master.v
+set_global_assignment -name VERILOG_FILE rtl/bustap_jtag/rtl/up_monitor.v
+set_global_assignment -name VERILOG_FILE rtl/bustap_jtag/rtl/altera/virtual_jtag_adda_fifo.v
+set_global_assignment -name VERILOG_FILE rtl/bustap_jtag/rtl/altera/virtual_jtag_adda_trig.v
+set_global_assignment -name VERILOG_FILE rtl/bustap_jtag/rtl/altera/virtual_jtag_addr_mask.v
+set_global_assignment -name VERILOG_FILE rtl/ctrl_clk.v
+set_global_assignment -name VERILOG_FILE ../rtl/top/ether_top.v
+set_global_assignment -name VERILOG_FILE ../rtl/ctrl/ctrl_top.v
+set_global_assignment -name VERILOG_FILE ../rtl/ctrl/ctrl_cpu.v
+set_global_assignment -name VERILOG_FILE ../rtl/ctrl/ctrl_mdio.v
+set_global_assignment -name VERILOG_FILE ../rtl/stat/stat_top.v
+set_global_assignment -name VERILOG_FILE ../rtl/stat/bit_vec_stat.v
+set_global_assignment -name VERILOG_FILE ../rtl/stat/bit_queue.v
+set_global_assignment -name VERILOG_FILE ../rtl/stat/bit_counter.v
+set_global_assignment -name VERILOG_FILE ../rtl/stat/vec_queue.v
+set_global_assignment -name VERILOG_FILE ../rtl/stat/vec_counter.v
+set_global_assignment -name VERILOG_FILE ../rtl/data/data_top.v
+set_global_assignment -name VERILOG_FILE ../rtl/data/tx/data_tx.v
+set_global_assignment -name VERILOG_FILE ../rtl/data/tx/gmii2rgmii.v
+set_global_assignment -name VERILOG_FILE ../rtl/data/tx/tx_gearbox.v
+set_global_assignment -name VERILOG_FILE ../rtl/data/tx/tx_gen.v
+set_global_assignment -name VERILOG_FILE ../rtl/data/tx/tx_payload.v
+set_global_assignment -name VERILOG_FILE ../rtl/data/tx/tx_con.v
+set_global_assignment -name VERILOG_FILE ../rtl/data/tx/bw_con.v
+#set_global_assignment -name VHDL_FILE ../rtl/data/tx/ir_con/ir_con.vhd
+#set_global_assignment -name VHDL_FILE ../rtl/data/tx/ir_con/bwp_fsm.vhd
+#set_global_assignment -name SMF_FILE ../rtl/data/tx/ir_con/bwp_fsm.smf
+set_global_assignment -name VERILOG_FILE ../rtl/data/tx/ir_con/ir_con.v
+set_global_assignment -name VERILOG_FILE ../rtl/data/rx/data_rx.v
+set_global_assignment -name VERILOG_FILE ../rtl/data/rx/rx_parser.v
+set_global_assignment -name VERILOG_FILE ../rtl/data/rx/rx_loop.v
+set_global_assignment -name VERILOG_FILE ../rtl/data/rx/rx_dump.v
+set_global_assignment -name VERILOG_FILE ../rtl/data/rx/rx_pause.v
+set_global_assignment -name VERILOG_FILE ../rtl/data/rx/rgmii2gmii.v
+set_global_assignment -name VERILOG_FILE ../rtl/data/rx/rx_gearbox.v
+set_global_assignment -name VERILOG_FILE ../rtl/data/rx/rx_payload.v
+set_global_assignment -name VERILOG_FILE ../rtl/common/crc32_data32.v
+set_global_assignment -name VERILOG_FILE ../rtl/common/prbs_any.v
+set_global_assignment -name VERILOG_FILE ../rtl/common/synchronizer_pulse.v
+set_global_assignment -name VERILOG_FILE ../rtl/common/synchronizer_level.v
+set_global_assignment -name VERILOG_FILE ../rtl/common/dpram_dc_32_1024.v
+set_global_assignment -name VERILOG_FILE ../rtl/common/dpram_sc_32_1024.v
+set_global_assignment -name VERILOG_FILE ../rtl/common/spram_sc_32_1024_jtag.v
+set_global_assignment -name VERILOG_FILE ../rtl/common/fifo_dc_18_512.v
+set_global_assignment -name VERILOG_FILE ../rtl/common/multiplier_32_32_d4.v
+set_global_assignment -name VERILOG_FILE ../rtl/common/dpram_dc_32_512_16_1024.v
+set_global_assignment -name VERILOG_FILE ../rtl/common/dpram_dc_18_4096.v
+set_global_assignment -name VERILOG_FILE ../rtl/common/inferred_ram_blocks.v
+
+
+
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

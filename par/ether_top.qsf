@@ -1,0 +1,118 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 1991-2013 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, Altera MegaCore Function License 
+# Agreement, or other applicable license agreement, including, 
+# without limitation, that your use is for the sole purpose of 
+# programming logic devices manufactured by Altera and sold by 
+# Altera or its authorized distributors.  Please refer to the 
+# applicable agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus II 32-bit
+# Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+# Date created = 16:10:14  August 30, 2013
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		ether_top_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus II software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "Cyclone IV E"
+set_global_assignment -name DEVICE EP4CE15E22C8
+set_global_assignment -name TOP_LEVEL_ENTITY ether_top
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION "13.0 SP1"
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "16:10:14  AUGUST 30, 2013"
+set_global_assignment -name LAST_QUARTUS_VERSION 13.1
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
+set_global_assignment -name NOMINAL_CORE_SUPPLY_VOLTAGE 1.2V
+
+
+
+
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+
+
+
+
+
+
+
+
+set_instance_assignment -name VIRTUAL_PIN ON -to *up_*
+
+
+
+
+set_global_assignment -name SDC_FILE ether_top.sdc
+set_global_assignment -name VERILOG_FILE define.v
+set_global_assignment -name VERILOG_FILE ../rtl/top/ether_top.v
+set_global_assignment -name VERILOG_FILE ../rtl/ctrl/ctrl_top.v
+set_global_assignment -name VERILOG_FILE ../rtl/ctrl/ctrl_clk.v
+set_global_assignment -name VERILOG_FILE ../rtl/ctrl/ctrl_cpu.v
+set_global_assignment -name VERILOG_FILE ../rtl/ctrl/ctrl_mdio.v
+set_global_assignment -name VERILOG_FILE ../rtl/stat/stat_top.v
+set_global_assignment -name VERILOG_FILE ../rtl/stat/bit_vec_stat.v
+set_global_assignment -name VERILOG_FILE ../rtl/stat/bit_queue.v
+set_global_assignment -name VERILOG_FILE ../rtl/stat/bit_counter.v
+set_global_assignment -name VERILOG_FILE ../rtl/stat/vec_queue.v
+set_global_assignment -name VERILOG_FILE ../rtl/stat/vec_counter.v
+set_global_assignment -name VERILOG_FILE ../rtl/data/data_top.v
+set_global_assignment -name VERILOG_FILE ../rtl/data/tx/data_tx.v
+set_global_assignment -name VERILOG_FILE ../rtl/data/tx/gmii2rgmii.v
+set_global_assignment -name VERILOG_FILE ../rtl/data/tx/tx_gearbox.v
+set_global_assignment -name VERILOG_FILE ../rtl/data/tx/tx_gen.v
+set_global_assignment -name VERILOG_FILE ../rtl/data/tx/tx_payload.v
+set_global_assignment -name VERILOG_FILE ../rtl/data/tx/tx_con.v
+set_global_assignment -name VERILOG_FILE ../rtl/data/tx/bw_con.v
+#set_global_assignment -name VHDL_FILE ../rtl/data/tx/ir_con/ir_con.vhd
+#set_global_assignment -name VHDL_FILE ../rtl/data/tx/ir_con/bwp_fsm.vhd
+#set_global_assignment -name SMF_FILE ../rtl/data/tx/ir_con/bwp_fsm.smf
+set_global_assignment -name VERILOG_FILE ../rtl/data/tx/ir_con/ir_con.v
+set_global_assignment -name VERILOG_FILE ../rtl/data/rx/data_rx.v
+set_global_assignment -name VERILOG_FILE ../rtl/data/rx/rx_parser.v
+set_global_assignment -name VERILOG_FILE ../rtl/data/rx/rx_loop.v
+set_global_assignment -name VERILOG_FILE ../rtl/data/rx/rx_dump.v
+set_global_assignment -name VERILOG_FILE ../rtl/data/rx/rx_pause.v
+set_global_assignment -name VERILOG_FILE ../rtl/data/rx/rgmii2gmii.v
+set_global_assignment -name VERILOG_FILE ../rtl/data/rx/rx_gearbox.v
+set_global_assignment -name VERILOG_FILE ../rtl/data/rx/rx_payload.v
+set_global_assignment -name VERILOG_FILE ../rtl/common/crc32_data32.v
+set_global_assignment -name VERILOG_FILE ../rtl/common/prbs_any.v
+set_global_assignment -name VERILOG_FILE ../rtl/common/synchronizer_pulse.v
+set_global_assignment -name VERILOG_FILE ../rtl/common/synchronizer_level.v
+set_global_assignment -name VERILOG_FILE ../rtl/common/dpram_dc_32_1024.v
+set_global_assignment -name VERILOG_FILE ../rtl/common/dpram_sc_32_1024.v
+set_global_assignment -name VERILOG_FILE ../rtl/common/spram_sc_32_1024_jtag.v
+set_global_assignment -name VERILOG_FILE ../rtl/common/fifo_dc_18_512.v
+set_global_assignment -name VERILOG_FILE ../rtl/common/multiplier_32_32_d4.v
+set_global_assignment -name VERILOG_FILE ../rtl/common/dpram_dc_32_512_16_1024.v
+set_global_assignment -name VERILOG_FILE ../rtl/common/dpram_dc_18_4096.v
+set_global_assignment -name VERILOG_FILE ../rtl/common/inferred_ram_blocks.v
+
+
+
+
+
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

@@ -1,0 +1,11 @@
+
+# Soft rst
+wr 00000004 00000001
+wr 00000004 00000000
+# PHY rst
+wr 00000004 00000002
+wr 00000004 00000000
+
+# set_con phy_status
+# set_phy local_loopback_1000
+
