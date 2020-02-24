@@ -8,4 +8,4 @@ vlib altera
 vlog -work altera altera_mf.v
 vlog -work altera 220model.v
 
-do resim_win.do
+do resim.do
